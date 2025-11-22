@@ -17,8 +17,56 @@
       "destination": "/player.html"
     },
     {
-      "source": "/:path*",
-      "destination": "/:path*"
+      "source": "/watch.html",
+      "destination": "/watch.html"
+    },
+    {
+      "source": "/watch.html/:path*",
+      "destination": "/watch.html"
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about.html"
+    }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/js/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/css/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/libs/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/image/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
